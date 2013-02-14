@@ -73,19 +73,21 @@ def process_postings(parsed_postings):
 
     # If necessary, geolocate the postings.
 
-    for src in parsed_postings:
-        posting = src['posting']
-        if "location" in posting:
-            raw_loc = posting['location']
+    try:
+        for src in parsed_postings:
+            posting = src['posting']
 
             has_lat_long = False # initially.
-            if "latitude" in raw_loc and "longitude" in raw_loc:
+            if ("location_latitude" in posting and 
+                "location_longitude" in posting):
                 has_lat_long = True
 
             has_loc_codes = False # initially.
-            for field in ["country", "state", "metro", "region", "county",
-                          "city", "locality", "zipcode"]:
-                if field in raw_loc:
+            for field in ["location_country", "location_state",
+                          "location_metro", "location_region",
+                          "location_county", "location_city",
+                          "location_locality", "location_zipcode"]:
+                if field in posting:
                     has_loc_codes = True
                     break
 
@@ -93,20 +95,25 @@ def process_postings(parsed_postings):
                 # This posting has a lat/long value but no location codes ->
                 # reverse geocode the posting to see which locations it belongs
                 # to.
-
-                locs = reverseGeocoder.calc_locations(raw_loc['latitude'],
-                                                      raw_loc['longitude'],
-                                                      raw_loc.get("bounds"),
-                                                      raw_loc.get("accuracy"))
+                locs = reverseGeocoder.calc_locations(
+                                float(posting['location_latitude']),
+                                float(posting['location_longitude']),
+                                posting.get("location_bounds"),
+                                posting.get("location_accuracy"))
 
                 for level,loc in locs.items():
-                    raw_loc[level] = loc
+                    posting["location_" + level] = loc
 
             # If we were supplied a bounds array, convert it to a string for
             # storage.
 
-            if "bounds" in raw_loc:
-                raw_loc['bounds'] = repr(bounds['raw_loc'])
+            if "location_bounds" in posting:
+                posting['location_bounds'] = repr(posting['location_bounds'])
+    except:
+        transaction.rollback()
+        raise
+    else:
+        transaction.commit()
 
     # Get the Annotation objects used by these postings. Since these
     # objects hold unique annotation values, they can be shared across

@@ -27,6 +27,7 @@
     This dictionary will be passed on to the posting processor so that the
     posting can be added to the system.
 """
+import datetime
 import decimal
 import logging
 
@@ -194,8 +195,12 @@ def check_raw_postings(raw_postings):
             parse_field(raw_posting, "timestamp", posting, "timestamp",
                         remaining_fields, coerce_to_type="datetime")
 
-            parse_field(raw_posting, "expires", posting, "expires",
-                        remaining_fields, coerce_to_type="datetime")
+            if "expires" in raw_posting:
+                parse_field(raw_posting, "expires", posting, "expires",
+                            remaining_fields, coerce_to_type="datetime")
+            else:
+                posting['expires'] = dateHelpers.datetime_in_utc() \
+                                   + datetime.timedelta(days=7)
 
             parse_field(raw_posting, "language", posting, "language",
                         remaining_fields, coerce_to_type="string")
