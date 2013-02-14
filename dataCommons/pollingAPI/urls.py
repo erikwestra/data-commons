@@ -1,6 +1,6 @@
 """ dataCommons.pollingAPI.urls
 
-    This module defines the URLs for the Polling API application.
+    This module defines the URLs for the "pollingAPI" application.
 """
 from django.conf.urls import *
 

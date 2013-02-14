@@ -160,7 +160,9 @@ def process_postings(parsed_postings):
 
             # Add or update the posting itself.
 
-            src['posting']['inserted'] = dateHelpers.datetime_in_utc()
+            now = dateHelpers.datetime_in_utc()
+            src['posting']['inserted'] = now
+            src['posting']['updated']  = now
 
             posting,created = Posting.objects.get_or_create(
                                 source_id=src['posting']['source_id'],

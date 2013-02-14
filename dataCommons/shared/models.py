@@ -144,6 +144,7 @@ class Posting(models.Model):
     timestamp          = models.DateTimeField(db_index=True)
     inserted           = models.DateTimeField(db_index=True,
                                               default=datetime.datetime.now)
+    updated            = models.DateTimeField(db_index=True)
     expires            = models.DateTimeField(db_index=True)
     language           = models.TextField(null=True)
     price              = models.FloatField(null=True, db_index=True)

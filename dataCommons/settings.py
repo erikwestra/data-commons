@@ -168,6 +168,7 @@ INSTALLED_APPS = (
     "dataCommons.postingAPI",
     "dataCommons.searchAPI",
     "dataCommons.summarizerAPI",
+    "dataCommons.pollingAPI",
     "dataCommons.monitoringAPI",
     "dataCommons.reporting",
     "dataCommons.admin",
