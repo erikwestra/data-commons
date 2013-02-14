@@ -1,0 +1,98 @@
+[
+    {
+        "pk": 20,
+        "model": "shared.categorygroup",
+        "fields": {
+            "code": "AAAA",
+            "name": "Animals"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "shared.categorygroup",
+        "fields": {
+            "code": "CCCC",
+            "name": "Community"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "shared.categorygroup",
+        "fields": {
+            "code": "DDDD",
+            "name": "Discussions"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "shared.categorygroup",
+        "fields": {
+            "code": "DISP",
+            "name": "Dispatch"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "shared.categorygroup",
+        "fields": {
+            "code": "SSSS",
+            "name": "For Sale"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "shared.categorygroup",
+        "fields": {
+            "code": "JJJJ",
+            "name": "Jobs"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "shared.categorygroup",
+        "fields": {
+            "code": "MMMM",
+            "name": "Mature"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "shared.categorygroup",
+        "fields": {
+            "code": "PPPP",
+            "name": "Personals"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "shared.categorygroup",
+        "fields": {
+            "code": "RRRR",
+            "name": "Real Estate"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "shared.categorygroup",
+        "fields": {
+            "code": "SVCS",
+            "name": "Services"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "shared.categorygroup",
+        "fields": {
+            "code": "ZZZZ",
+            "name": "Uncategorized"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "shared.categorygroup",
+        "fields": {
+            "code": "VVVV",
+            "name": "Vehicles"
+        }
+    }
+]

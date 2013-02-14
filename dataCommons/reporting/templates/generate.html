@@ -1,0 +1,166 @@
+<html>
+  <head>
+    <title>{{ report_name }}</title>
+    <style type="text/css" media="all">
+      a {
+        text-decoration: none;
+        color: #00c;
+      }
+      td.label {
+        font-size: small;
+        text-align: right
+      }
+    </style>
+
+    <script type="text/javascript"
+            src="{{ STATIC_URL }}shared/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript"
+            src="{{ STATIC_URL }}shared/jquery.flot.min.js"></script>
+    <script type="text/javascript"
+            src="{{ STATIC_URL }}shared/jquery.flot.navigate.js"></script>
+    <script type="text/javascript"
+            src="{{ STATIC_URL }}shared/jquery.flot.axislabels.js"></script>
+  </head>
+
+  <body>
+    <h2>{{ report_name }}</h2>
+    <i>{{ description }}</i>
+    <p/>
+    <table cellspacing="0" cellpadding="5" border="0"
+           style="padding-left: 20px">
+{% for param in params %}
+      <tr>
+        <td class="label">
+          {{ param.label }}
+        </td>
+        <td class="field">
+  {% if param.choices %}
+          <select id="{{ param.name }}">
+    {% for label,value in param.choices %}
+            <option {% if param.value == value %} selected{% endif %}
+                    value="{{ value }}">
+              {{ label }}
+            </option>
+    {% endfor %}
+          </select>
+  {% elif param.type == "string" %}
+          <input type="text" id="{{ param.name }}"
+                 value="{{ param.value }}"/>
+  {% elif param.type == "integer" %}
+          <input type="text" id="{{ param.name }}"
+                 value="{{ param.value }}"/>
+  {% elif param.type == "float" %}
+          <input type="text" id="{{ param.name }}"
+                 value="{{ param.value }}"/>
+  {% elif param.type == "boolean" %}
+          <input type="checkbox" id="{{ param.name }}"
+                 {% if param.value %}checked="yes"{% endif %}/>
+  {% elif param.type == "timeframe" %}
+          <input type="text" id="{{ param.name }}-num_periods"
+                 value="{{ param.num_periods }}" size="3"/>
+          <select id="{{ param.name }}-period_size">
+            <option {% if param.period_size == "s" %}selected{% endif %}
+                    value="s">
+              seconds
+            </option>
+            <option {% if param.period_size == "m" %}selected{% endif %}
+                    value="m">
+             minutes
+           </option>
+           <option {% if param.period_size == "h" %}selected{% endif %}
+                   value="h">
+             hours
+           </option>
+           <option {% if param.period_size == "d" %}selected{% endif %}
+                   value="d">
+             days
+           </option>
+           <option {% if param.period_size == "w" %}selected{% endif %}
+                   value="w">
+             weeks
+           </option>
+         </select>
+  {% endif %}
+        </td>
+      </tr>
+{% endfor %}
+
+      <tr>
+        <td colspan="2" style="height:10px">
+        </td>
+      </tr>
+
+      <tr>
+        <td width="100%" colspan="2">
+          <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+              <td align="left" style="padding-left:20px">
+                <button id="generate" onclick="generate();">
+                  Generate Report
+                </button>
+              </td>
+              <td align="right" style="padding-right:20px">
+                <button onclick="document.location='/reporting'">
+                  Done
+                </button>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <div style="height:20px"></div>
+
+    <div id="report" style="width:600px;height:300px"></div>
+
+    <script type="text/javascript">
+
+      {{ renderer|safe }}
+
+      function generate() {
+        var params = {};
+  {% for param in params %}
+    {% if param.choices %}
+        params['{{ param.name }}'] = $("#{{ param.name }}").val();
+    {% elif param.type == "string" %}
+        params['{{ param.name }}'] = $("#{{ param.name }}").val();
+    {% elif param.type == "integer" %}
+        params['{{ param.name }}'] = $("#{{ param.name }}").val();
+    {% elif param.type == "float" %}
+        params['{{ param.name }}'] = $("#{{ param.name }}").val();
+    {% elif param.type == "boolean" %}
+        if ($("#{{ param.name }}").is(":checked")) {
+          params['{{ param.name }}'] = true;
+        } else {
+          params['{{ param.name }}'] = false;
+        }
+    {% elif param.type == "timeframe" %}
+        var num_periods = $("#{{ param.name }}-num_periods").val();
+        var period_code = $("#{{ param.name }}-period_size").val();
+        params['{{ param.name }}'] = num_periods + period_code;
+    {% endif %}
+  {% endfor %}
+
+        params['type'] = "{{ report_type }}";
+        params['tzoffset'] = new Date().getTimezoneOffset();
+
+        $.ajax({
+          url: "/reporting/get_data",
+          data: params,
+          datatype: "json",
+          success: function(response) {
+            if (response.success) {
+              render(response.data);
+            } else {
+              alert(response.error);
+            }
+          },
+          error: function(request, err_type) {
+            alert(err_type);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

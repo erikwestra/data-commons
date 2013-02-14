@@ -1,4 +1,9 @@
-*.log
-*.pot
+logs
+venv
+dataCommons/custom_settings.py
+grabberSimulator/*.db
+grabberSimulator/next_posting_id.txt
 *.pyc
-local_settings.py
+*.swp
+*.py~
+.DS_STORE

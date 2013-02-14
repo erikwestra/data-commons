@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>3taps Data Commons Admin Interface</title>
+    <script type="text/javascript"
+            src="{{ STATIC_URL }}shared/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript"
+            src="{{ STATIC_URL }}shared/jquery.flot.min.js"></script>
+  </head>
+  <body>
+    <h3>Posting Queue Report:</h3>
+
+    <div id="graph" style="width:600px;height:300px"></div>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+          $.ajax({
+            url: "/api/latest/monitoring/report/?type=POSTING_QUEUE&period=1h",
+            datatype: "json",
+            success: function(response) {
+              if (response.success) {
+                var data = [];
+                for (var i=0; i<response.data.length; i++) {
+                  var row = response.data[i];
+                  var timestamp = row[0];
+                  var queue_size = row[1];
+                  data.push([timestamp * 1000, queue_size]);
+                }
+
+                $.plot($("#graph"), [data],
+                       {xaxis: { mode : "time"}});
+              } else {
+                alert(response.error);
+              }
+            },
+            error: function(request, err_type) {
+              alert(err_type);
+            }
+          });
+      });
+    </script>
+  </body>
+</html>

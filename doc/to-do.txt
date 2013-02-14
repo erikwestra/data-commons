@@ -1,0 +1,130 @@
+Latest Changes:
+---------------
+
+ + Implement "reset_queue" command which adds a "POSTINGS_DEQUEUED" event to
+   reset the size of the posting queue so the grabbers can work at full speed.
+
+ + Added a "status_wanted" field to the Posting record.
+
+ + The Posting API now accepts the "wanted" status value.
+
+ + The Search and Summary APIs now accept a "status=wanted" parameter to filter
+   on postings which have a "wanted" status value.
+
+ + I think I've figured out why the posting queue was getting out of sync.  
+
+
+3taps Data Commons To-Do List
+-----------------------------
+
+ * Store the image width,height into the posting record.
+
+ * When updating an existing posting, the required fields should be more
+   relaxed -- shouldn't need to resend the heading, etc.
+
+############
+
+ * Add a report to show the "wait_for" value over time.
+
+ * Change the "posting summary" report to use the "POSTINGS_PROCESSED" events
+   rather than counting the number of postings in the database.
+
+ * Optimise the returned fields in the search API query -- at the moment it
+   extracts all the fields from the Posting record, which it doesn't need to.
+
+ * Implement admin logic for viewing/editing the master lists of categories,
+   category groups, data sources and locations.
+
+ * The query and debug logging sessions don't really work correctly -- turning
+   on query logging causes debug messages to be seen, so having both options
+   turned on causes debug messages to be shown twice.
+
+ * If a field is supplied as "None", it isn't being processed and we get an
+   "unexpected field: XXX" error.  Also, images can't be None at the moment --
+   it needs an array.
+
+ * Implement the Reference API.
+
+ * Let the user press the Return key in a parameter field to generate the
+   report.
+
+ * See if New Relic will make it easier to monitor our system.
+
+ * Add to Search API:
+
+     + Add support for performing range-based searches against price (eg,
+       "price=XXX..YYY", where "XXX" and "YYY" are integer or floating-point
+       numbers.
+     + Add "has_image=true" search criteria.
+     + Add searching by the various status values.
+     + Add "timestamp=XXX..YYY" search criteria, where "XXX" and "YYY" are unix
+       timestamp values in UTC.
+
+     * Sort results by timestamp or relevance (both descending)
+     * Add support for performing "OR" search queries if a search parameter is
+       repeated.  This should be quite easy as the repeated parameters become
+       an "IN" clause in the SQL query statement.
+     * Add searching for annotation values.
+
+ * Add to Summary API:
+
+     * Ability to summarize postings by status.
+     + Ability to filter summaries by status.
+
+#############################################################################
+
+Mon 14/Jan/2013:
+
+1. Fixed a bug in reporting module's data reducer.  Reports are working nicely
+   now.
+
+2. Fixed a bug in the way annotations were being captured by the Posting API,
+   that caused the occasional crash and meant that not all annotations were
+   being processed.
+
+3. Spent some time trying to get application logging set up on Heroku.
+   Unfortunately, it seems that Heroku's logging system is recording every
+   record inserted into the database -- and so the logs are getting swamped by
+   the sheer size of the posting data.  As a result, I can't see any of the
+   usual logging information which helps us to see how the system is working.
+   Worse still, the logging system is dropping large numbers of log entries, so
+   possibly-important log messages are being lost.
+
+   I have some ideas for how I can work around this, and I've also opened a
+   "ticket" with Heroku's technical support asking if there's any way to
+   prevent all the spurious entries appearing in the log.  They won't respond
+   until next week, so in the meantime I'm just trying to view the application
+   logs as best I can, ignoring the thousands of spurious entries that Heroku
+   inserts into our application log.
+
+4. Implemented the ability to search by external ID.  This will let Igor grab
+   individual postings from our database.
+
+5. Added the ability to search for postings by status value, and to filter
+   summary results by status (NOTE: this is not the same as summarizing by
+   status, which is a different challenge).
+
+6. Added the ability to only include postings which have (or don't have) images
+   in the search and summary results.
+
+7. Added the ability to limit searches and summaries to a given date/time
+   range.
+
+8. Added the ability to limit searches and summaries to postings within a given
+   price range.
+
+9. Added the ability to limit searches and summaries to postings with a given
+   currency code.  Note that this is designed to work with price ranges --
+   if we look for postings with "price=100..200", we don't want to include
+   postings with a price of 150 Nepalese rupees.
+
+10. Added database timeouts to fix problems with lengthy queries.
+
+11. Changed the response returned by the Summary API.  Instead of just
+    returning the summary directly, we're now returning an object with a
+    "success" field that indicates whether or not the summary succeeded.  If it
+    didn't, an "error" field will be included that contains the details of the
+    error.  If the request did succeed, the returned object will have a
+    "summary" field that holds the calculated summary.  This makes it easier to
+    pass error responses back to the caller.
+

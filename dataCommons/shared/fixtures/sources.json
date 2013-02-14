@@ -1,0 +1,274 @@
+[
+    {
+        "pk": 1,
+        "model": "shared.source",
+        "fields": {
+            "code": "CRAIG",
+            "name": "Craigslist"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "shared.source",
+        "fields": {
+            "code": "TWITT",
+            "name": "Twitter"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "shared.source",
+        "fields": {
+            "code": "INDEE",
+            "name": "Indeed"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "shared.source",
+        "fields": {
+            "code": "INTRN",
+            "name": "InternMatch"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "shared.source",
+        "fields": {
+            "code": "OODLE",
+            "name": "Oodle"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "shared.source",
+        "fields": {
+            "code": "3TAPS",
+            "name": "3taps"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "shared.source",
+        "fields": {
+            "code": "E_BAY",
+            "name": "eBay"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "shared.source",
+        "fields": {
+            "code": "EBAYM",
+            "name": "eBay Motors"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "shared.source",
+        "fields": {
+            "code": "O_L_X",
+            "name": "OLX"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "shared.source",
+        "fields": {
+            "code": "AMZON",
+            "name": "Amazon"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "shared.source",
+        "fields": {
+            "code": "HMNGS",
+            "name": "Hemmings"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "shared.source",
+        "fields": {
+            "code": "LNKDN",
+            "name": "LinkedIn"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "shared.source",
+        "fields": {
+            "code": "ZILOW",
+            "name": "Zillow"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "shared.source",
+        "fields": {
+            "code": "9-1-1",
+            "name": "9-1-1alert"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "shared.source",
+        "fields": {
+            "code": "PB3TP",
+            "name": "Powered by 3taps (p)"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "shared.source",
+        "fields": {
+            "code": "37SIG",
+            "name": "37signals"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "shared.source",
+        "fields": {
+            "code": "STACK",
+            "name": "Stack Overflow"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "shared.source",
+        "fields": {
+            "code": "GITHB",
+            "name": "Github"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "shared.source",
+        "fields": {
+            "code": "WIKIP",
+            "name": "Wikipedia"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "shared.source",
+        "fields": {
+            "code": "ETSY_",
+            "name": "Etsy"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "shared.source",
+        "fields": {
+            "code": "CLTST",
+            "name": "Craigslist Test"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "shared.source",
+        "fields": {
+            "code": "GROUP",
+            "name": "Groupon"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "shared.source",
+        "fields": {
+            "code": "LIVSO",
+            "name": "LivingSocial"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "shared.source",
+        "fields": {
+            "code": "CFREE",
+            "name": "Casafree"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "shared.source",
+        "fields": {
+            "code": "WISHC",
+            "name": "Wishcan"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "shared.source",
+        "fields": {
+            "code": "RBOOK",
+            "name": "Redbook"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "shared.source",
+        "fields": {
+            "code": "ICIRC",
+            "name": "InnerCircle"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "shared.source",
+        "fields": {
+            "code": "FLYUP",
+            "name": "FlyUp"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "shared.source",
+        "fields": {
+            "code": "EBAY2",
+            "name": "Ebay Test"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "shared.source",
+        "fields": {
+            "code": "TM_NZ",
+            "name": "TradeMe"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "shared.source",
+        "fields": {
+            "code": "CLRTM",
+            "name": "Craigslist Realtime"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "shared.source",
+        "fields": {
+            "code": "BRING",
+            "name": "Bring10"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "shared.source",
+        "fields": {
+            "code": "EBAYC",
+            "name": "Ebay Classifieds"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "shared.source",
+        "fields": {
+            "code": "BKPGE",
+            "name": "Backpage"
+        }
+    }
+]

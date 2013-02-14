@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>3taps Data Commons Admin Interface</title>
+    <style type="text/css" media="all">
+      a {
+        text-decoration: none;
+        color: #00c;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Welcome to the 3taps Data Commons Admin Interface</h3>
+    <p/>
+    Available Options:
+
+    <ul>
+{% for label,url in options %}
+      <li><a href="{{ url }}">{{label}}</a></li>
+{% endfor %}
+    </ul>
+  </body>
+</html>

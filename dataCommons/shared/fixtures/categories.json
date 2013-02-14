@@ -1,0 +1,1322 @@
+[
+    {
+        "pk": 301,
+        "model": "shared.category",
+        "fields": {
+            "code": "APET",
+            "group": 20,
+            "name": "Pets",
+            "rank": 1
+        }
+    },
+    {
+        "pk": 302,
+        "model": "shared.category",
+        "fields": {
+            "code": "ASUP",
+            "group": 20,
+            "name": "Supplies",
+            "rank": 2
+        }
+    },
+    {
+        "pk": 303,
+        "model": "shared.category",
+        "fields": {
+            "code": "AOTH",
+            "group": 20,
+            "name": "Other",
+            "rank": 3
+        }
+    },
+    {
+        "pk": 304,
+        "model": "shared.category",
+        "fields": {
+            "code": "C311",
+            "group": 21,
+            "name": "311",
+            "rank": 1
+        }
+    },
+    {
+        "pk": 305,
+        "model": "shared.category",
+        "fields": {
+            "code": "C911",
+            "group": 21,
+            "name": "911",
+            "rank": 2
+        }
+    },
+    {
+        "pk": 306,
+        "model": "shared.category",
+        "fields": {
+            "code": "COMM",
+            "group": 21,
+            "name": "Bulletin",
+            "rank": 3
+        }
+    },
+    {
+        "pk": 307,
+        "model": "shared.category",
+        "fields": {
+            "code": "CLNF",
+            "group": 21,
+            "name": "Lost & Found",
+            "rank": 4
+        }
+    },
+    {
+        "pk": 308,
+        "model": "shared.category",
+        "fields": {
+            "code": "CRID",
+            "group": 21,
+            "name": "Rideshares",
+            "rank": 5
+        }
+    },
+    {
+        "pk": 309,
+        "model": "shared.category",
+        "fields": {
+            "code": "DISC",
+            "group": 22,
+            "name": "Discussions",
+            "rank": 1
+        }
+    },
+    {
+        "pk": 310,
+        "model": "shared.category",
+        "fields": {
+            "code": "DDEL",
+            "group": 23,
+            "name": "Delivery",
+            "rank": 1
+        }
+    },
+    {
+        "pk": 311,
+        "model": "shared.category",
+        "fields": {
+            "code": "DTAX",
+            "group": 23,
+            "name": "Taxi",
+            "rank": 2
+        }
+    },
+    {
+        "pk": 312,
+        "model": "shared.category",
+        "fields": {
+            "code": "DTOW",
+            "group": 23,
+            "name": "Tow",
+            "rank": 3
+        }
+    },
+    {
+        "pk": 313,
+        "model": "shared.category",
+        "fields": {
+            "code": "DDDD",
+            "group": 23,
+            "name": "Dispatch",
+            "rank": 4
+        }
+    },
+    {
+        "pk": 314,
+        "model": "shared.category",
+        "fields": {
+            "code": "SANT",
+            "group": 24,
+            "name": "Antiques",
+            "rank": 1
+        }
+    },
+    {
+        "pk": 315,
+        "model": "shared.category",
+        "fields": {
+            "code": "SAPP",
+            "group": 24,
+            "name": "Apparel",
+            "rank": 2
+        }
+    },
+    {
+        "pk": 316,
+        "model": "shared.category",
+        "fields": {
+            "code": "SAPL",
+            "group": 24,
+            "name": "Appliances",
+            "rank": 3
+        }
+    },
+    {
+        "pk": 317,
+        "model": "shared.category",
+        "fields": {
+            "code": "SANC",
+            "group": 24,
+            "name": "Art & Crafts",
+            "rank": 4
+        }
+    },
+    {
+        "pk": 318,
+        "model": "shared.category",
+        "fields": {
+            "code": "SKID",
+            "group": 24,
+            "name": "Babies & Kids",
+            "rank": 5
+        }
+    },
+    {
+        "pk": 319,
+        "model": "shared.category",
+        "fields": {
+            "code": "SBAR",
+            "group": 24,
+            "name": "Barters",
+            "rank": 6
+        }
+    },
+    {
+        "pk": 320,
+        "model": "shared.category",
+        "fields": {
+            "code": "SBIK",
+            "group": 24,
+            "name": "Bicycles",
+            "rank": 7
+        }
+    },
+    {
+        "pk": 321,
+        "model": "shared.category",
+        "fields": {
+            "code": "SBIZ",
+            "group": 24,
+            "name": "Businesses",
+            "rank": 8
+        }
+    },
+    {
+        "pk": 322,
+        "model": "shared.category",
+        "fields": {
+            "code": "SCOL",
+            "group": 24,
+            "name": "Collections",
+            "rank": 9
+        }
+    },
+    {
+        "pk": 323,
+        "model": "shared.category",
+        "fields": {
+            "code": "SCOM",
+            "group": 24,
+            "name": "Computers",
+            "rank": 10
+        }
+    },
+    {
+        "pk": 324,
+        "model": "shared.category",
+        "fields": {
+            "code": "SEDU",
+            "group": 24,
+            "name": "Educational",
+            "rank": 11
+        }
+    },
+    {
+        "pk": 325,
+        "model": "shared.category",
+        "fields": {
+            "code": "SELE",
+            "group": 24,
+            "name": "Electronics & Photo",
+            "rank": 12
+        }
+    },
+    {
+        "pk": 326,
+        "model": "shared.category",
+        "fields": {
+            "code": "SFNB",
+            "group": 24,
+            "name": "Food & Beverage",
+            "rank": 13
+        }
+    },
+    {
+        "pk": 327,
+        "model": "shared.category",
+        "fields": {
+            "code": "SFUR",
+            "group": 24,
+            "name": "Furniture",
+            "rank": 14
+        }
+    },
+    {
+        "pk": 328,
+        "model": "shared.category",
+        "fields": {
+            "code": "SGFT",
+            "group": 24,
+            "name": "Gift Cards",
+            "rank": 15
+        }
+    },
+    {
+        "pk": 329,
+        "model": "shared.category",
+        "fields": {
+            "code": "SHNB",
+            "group": 24,
+            "name": "Health & Beauty",
+            "rank": 16
+        }
+    },
+    {
+        "pk": 330,
+        "model": "shared.category",
+        "fields": {
+            "code": "SHNG",
+            "group": 24,
+            "name": "Home & Garden",
+            "rank": 17
+        }
+    },
+    {
+        "pk": 331,
+        "model": "shared.category",
+        "fields": {
+            "code": "SJWL",
+            "group": 24,
+            "name": "Jewelry",
+            "rank": 18
+        }
+    },
+    {
+        "pk": 332,
+        "model": "shared.category",
+        "fields": {
+            "code": "SLIT",
+            "group": 24,
+            "name": "Literature",
+            "rank": 19
+        }
+    },
+    {
+        "pk": 333,
+        "model": "shared.category",
+        "fields": {
+            "code": "SIND",
+            "group": 24,
+            "name": "Industrial",
+            "rank": 20
+        }
+    },
+    {
+        "pk": 334,
+        "model": "shared.category",
+        "fields": {
+            "code": "SMNM",
+            "group": 24,
+            "name": "Movies & Music",
+            "rank": 21
+        }
+    },
+    {
+        "pk": 335,
+        "model": "shared.category",
+        "fields": {
+            "code": "SMUS",
+            "group": 24,
+            "name": "Musical Instruments",
+            "rank": 22
+        }
+    },
+    {
+        "pk": 336,
+        "model": "shared.category",
+        "fields": {
+            "code": "SOTH",
+            "group": 24,
+            "name": "Other Goods",
+            "rank": 23
+        }
+    },
+    {
+        "pk": 337,
+        "model": "shared.category",
+        "fields": {
+            "code": "SRES",
+            "group": 24,
+            "name": "Restaurants",
+            "rank": 24
+        }
+    },
+    {
+        "pk": 338,
+        "model": "shared.category",
+        "fields": {
+            "code": "SSNF",
+            "group": 24,
+            "name": "Sports & Fitness",
+            "rank": 25
+        }
+    },
+    {
+        "pk": 339,
+        "model": "shared.category",
+        "fields": {
+            "code": "STIX",
+            "group": 24,
+            "name": "Tickets",
+            "rank": 26
+        }
+    },
+    {
+        "pk": 340,
+        "model": "shared.category",
+        "fields": {
+            "code": "STOO",
+            "group": 24,
+            "name": "Tools",
+            "rank": 27
+        }
+    },
+    {
+        "pk": 341,
+        "model": "shared.category",
+        "fields": {
+            "code": "STOY",
+            "group": 24,
+            "name": "Toys & Hobbies",
+            "rank": 28
+        }
+    },
+    {
+        "pk": 342,
+        "model": "shared.category",
+        "fields": {
+            "code": "STVL",
+            "group": 24,
+            "name": "Travel",
+            "rank": 29
+        }
+    },
+    {
+        "pk": 343,
+        "model": "shared.category",
+        "fields": {
+            "code": "SWNT",
+            "group": 24,
+            "name": "Wanted",
+            "rank": 30
+        }
+    },
+    {
+        "pk": 344,
+        "model": "shared.category",
+        "fields": {
+            "code": "JACC",
+            "group": 25,
+            "name": "Accounting",
+            "rank": 1
+        }
+    },
+    {
+        "pk": 345,
+        "model": "shared.category",
+        "fields": {
+            "code": "JADM",
+            "group": 25,
+            "name": "Administrative",
+            "rank": 2
+        }
+    },
+    {
+        "pk": 346,
+        "model": "shared.category",
+        "fields": {
+            "code": "JAER",
+            "group": 25,
+            "name": "Aerospace & Defense",
+            "rank": 3
+        }
+    },
+    {
+        "pk": 347,
+        "model": "shared.category",
+        "fields": {
+            "code": "JANL",
+            "group": 25,
+            "name": "Analyst",
+            "rank": 4
+        }
+    },
+    {
+        "pk": 348,
+        "model": "shared.category",
+        "fields": {
+            "code": "JANA",
+            "group": 25,
+            "name": "Animals & Agriculture",
+            "rank": 5
+        }
+    },
+    {
+        "pk": 349,
+        "model": "shared.category",
+        "fields": {
+            "code": "JARC",
+            "group": 25,
+            "name": "Architecture",
+            "rank": 6
+        }
+    },
+    {
+        "pk": 350,
+        "model": "shared.category",
+        "fields": {
+            "code": "JART",
+            "group": 25,
+            "name": "Art",
+            "rank": 7
+        }
+    },
+    {
+        "pk": 351,
+        "model": "shared.category",
+        "fields": {
+            "code": "JAUT",
+            "group": 25,
+            "name": "Automobile",
+            "rank": 8
+        }
+    },
+    {
+        "pk": 352,
+        "model": "shared.category",
+        "fields": {
+            "code": "JBEA",
+            "group": 25,
+            "name": "Beauty",
+            "rank": 9
+        }
+    },
+    {
+        "pk": 353,
+        "model": "shared.category",
+        "fields": {
+            "code": "JBIZ",
+            "group": 25,
+            "name": "Business Development",
+            "rank": 10
+        }
+    },
+    {
+        "pk": 354,
+        "model": "shared.category",
+        "fields": {
+            "code": "JWEB",
+            "group": 25,
+            "name": "Computer & Web",
+            "rank": 11
+        }
+    },
+    {
+        "pk": 355,
+        "model": "shared.category",
+        "fields": {
+            "code": "JCST",
+            "group": 25,
+            "name": "Construction & Facilities",
+            "rank": 12
+        }
+    },
+    {
+        "pk": 356,
+        "model": "shared.category",
+        "fields": {
+            "code": "JCON",
+            "group": 25,
+            "name": "Consulting",
+            "rank": 13
+        }
+    },
+    {
+        "pk": 357,
+        "model": "shared.category",
+        "fields": {
+            "code": "JCUS",
+            "group": 25,
+            "name": "Customer Service",
+            "rank": 14
+        }
+    },
+    {
+        "pk": 358,
+        "model": "shared.category",
+        "fields": {
+            "code": "JDES",
+            "group": 25,
+            "name": "Design",
+            "rank": 15
+        }
+    },
+    {
+        "pk": 359,
+        "model": "shared.category",
+        "fields": {
+            "code": "JEDU",
+            "group": 25,
+            "name": "Education",
+            "rank": 16
+        }
+    },
+    {
+        "pk": 360,
+        "model": "shared.category",
+        "fields": {
+            "code": "JENE",
+            "group": 25,
+            "name": "Energy",
+            "rank": 17
+        }
+    },
+    {
+        "pk": 361,
+        "model": "shared.category",
+        "fields": {
+            "code": "JENG",
+            "group": 25,
+            "name": "Engineering",
+            "rank": 18
+        }
+    },
+    {
+        "pk": 362,
+        "model": "shared.category",
+        "fields": {
+            "code": "JENT",
+            "group": 25,
+            "name": "Entertainment & Media",
+            "rank": 19
+        }
+    },
+    {
+        "pk": 363,
+        "model": "shared.category",
+        "fields": {
+            "code": "JEVE",
+            "group": 25,
+            "name": "Events",
+            "rank": 20
+        }
+    },
+    {
+        "pk": 364,
+        "model": "shared.category",
+        "fields": {
+            "code": "JFIN",
+            "group": 25,
+            "name": "Finance",
+            "rank": 21
+        }
+    },
+    {
+        "pk": 365,
+        "model": "shared.category",
+        "fields": {
+            "code": "JFNB",
+            "group": 25,
+            "name": "Food & Beverage",
+            "rank": 22
+        }
+    },
+    {
+        "pk": 366,
+        "model": "shared.category",
+        "fields": {
+            "code": "JGIG",
+            "group": 25,
+            "name": "Gigs",
+            "rank": 23
+        }
+    },
+    {
+        "pk": 367,
+        "model": "shared.category",
+        "fields": {
+            "code": "JGOV",
+            "group": 25,
+            "name": "Government",
+            "rank": 24
+        }
+    },
+    {
+        "pk": 368,
+        "model": "shared.category",
+        "fields": {
+            "code": "JHEA",
+            "group": 25,
+            "name": "Healthcare",
+            "rank": 25
+        }
+    },
+    {
+        "pk": 369,
+        "model": "shared.category",
+        "fields": {
+            "code": "JHOS",
+            "group": 25,
+            "name": "Hospitality & Travel",
+            "rank": 26
+        }
+    },
+    {
+        "pk": 370,
+        "model": "shared.category",
+        "fields": {
+            "code": "JHUM",
+            "group": 25,
+            "name": "Human Resources",
+            "rank": 27
+        }
+    },
+    {
+        "pk": 371,
+        "model": "shared.category",
+        "fields": {
+            "code": "JMNT",
+            "group": 25,
+            "name": "Installation, Maintenance & Repair",
+            "rank": 28
+        }
+    },
+    {
+        "pk": 372,
+        "model": "shared.category",
+        "fields": {
+            "code": "JINS",
+            "group": 25,
+            "name": "Insurance",
+            "rank": 29
+        }
+    },
+    {
+        "pk": 373,
+        "model": "shared.category",
+        "fields": {
+            "code": "JLAW",
+            "group": 25,
+            "name": "Law Enforcement",
+            "rank": 30
+        }
+    },
+    {
+        "pk": 374,
+        "model": "shared.category",
+        "fields": {
+            "code": "JLEG",
+            "group": 25,
+            "name": "Legal",
+            "rank": 31
+        }
+    },
+    {
+        "pk": 375,
+        "model": "shared.category",
+        "fields": {
+            "code": "JMAN",
+            "group": 25,
+            "name": "Management & Directorship",
+            "rank": 32
+        }
+    },
+    {
+        "pk": 376,
+        "model": "shared.category",
+        "fields": {
+            "code": "JMFT",
+            "group": 25,
+            "name": "Manufacturing & Mechanical",
+            "rank": 33
+        }
+    },
+    {
+        "pk": 377,
+        "model": "shared.category",
+        "fields": {
+            "code": "JMAR",
+            "group": 25,
+            "name": "Marketing, Advertising & Public Relations",
+            "rank": 34
+        }
+    },
+    {
+        "pk": 378,
+        "model": "shared.category",
+        "fields": {
+            "code": "JNON",
+            "group": 25,
+            "name": "Non-Profit",
+            "rank": 35
+        }
+    },
+    {
+        "pk": 379,
+        "model": "shared.category",
+        "fields": {
+            "code": "JOPS",
+            "group": 25,
+            "name": "Operations & Logistics",
+            "rank": 36
+        }
+    },
+    {
+        "pk": 380,
+        "model": "shared.category",
+        "fields": {
+            "code": "JOTH",
+            "group": 25,
+            "name": "Other",
+            "rank": 37
+        }
+    },
+    {
+        "pk": 381,
+        "model": "shared.category",
+        "fields": {
+            "code": "JPHA",
+            "group": 25,
+            "name": "Pharmaceutical",
+            "rank": 38
+        }
+    },
+    {
+        "pk": 382,
+        "model": "shared.category",
+        "fields": {
+            "code": "JPRO",
+            "group": 25,
+            "name": "Product, Project & Program Management",
+            "rank": 39
+        }
+    },
+    {
+        "pk": 383,
+        "model": "shared.category",
+        "fields": {
+            "code": "JPUR",
+            "group": 25,
+            "name": "Purchasing",
+            "rank": 40
+        }
+    },
+    {
+        "pk": 384,
+        "model": "shared.category",
+        "fields": {
+            "code": "JQUA",
+            "group": 25,
+            "name": "Quality Assurance",
+            "rank": 41
+        }
+    },
+    {
+        "pk": 385,
+        "model": "shared.category",
+        "fields": {
+            "code": "JREA",
+            "group": 25,
+            "name": "Real Estate",
+            "rank": 42
+        }
+    },
+    {
+        "pk": 386,
+        "model": "shared.category",
+        "fields": {
+            "code": "JREC",
+            "group": 25,
+            "name": "Recreation",
+            "rank": 43
+        }
+    },
+    {
+        "pk": 387,
+        "model": "shared.category",
+        "fields": {
+            "code": "JRES",
+            "group": 25,
+            "name": "Resumes",
+            "rank": 44
+        }
+    },
+    {
+        "pk": 388,
+        "model": "shared.category",
+        "fields": {
+            "code": "JRNW",
+            "group": 25,
+            "name": "Retail & Wholesale",
+            "rank": 45
+        }
+    },
+    {
+        "pk": 389,
+        "model": "shared.category",
+        "fields": {
+            "code": "JSCI",
+            "group": 25,
+            "name": "Science",
+            "rank": 46
+        }
+    },
+    {
+        "pk": 390,
+        "model": "shared.category",
+        "fields": {
+            "code": "JSEC",
+            "group": 25,
+            "name": "Security",
+            "rank": 47
+        }
+    },
+    {
+        "pk": 391,
+        "model": "shared.category",
+        "fields": {
+            "code": "JSKL",
+            "group": 25,
+            "name": "Skilled Trade & General Labor",
+            "rank": 48
+        }
+    },
+    {
+        "pk": 392,
+        "model": "shared.category",
+        "fields": {
+            "code": "JTEL",
+            "group": 25,
+            "name": "Telecommunications",
+            "rank": 49
+        }
+    },
+    {
+        "pk": 393,
+        "model": "shared.category",
+        "fields": {
+            "code": "JTRA",
+            "group": 25,
+            "name": "Transportation",
+            "rank": 50
+        }
+    },
+    {
+        "pk": 394,
+        "model": "shared.category",
+        "fields": {
+            "code": "JVOL",
+            "group": 25,
+            "name": "Volunteer",
+            "rank": 51
+        }
+    },
+    {
+        "pk": 395,
+        "model": "shared.category",
+        "fields": {
+            "code": "JWNP",
+            "group": 25,
+            "name": "Writing & Publishing",
+            "rank": 52
+        }
+    },
+    {
+        "pk": 396,
+        "model": "shared.category",
+        "fields": {
+            "code": "JINT",
+            "group": 25,
+            "name": "International",
+            "rank": 53
+        }
+    },
+    {
+        "pk": 397,
+        "model": "shared.category",
+        "fields": {
+            "code": "JSAL",
+            "group": 25,
+            "name": "Sales",
+            "rank": 54
+        }
+    },
+    {
+        "pk": 398,
+        "model": "shared.category",
+        "fields": {
+            "code": "MADU",
+            "group": 26,
+            "name": "Adult Industry",
+            "rank": 1
+        }
+    },
+    {
+        "pk": 399,
+        "model": "shared.category",
+        "fields": {
+            "code": "MALC",
+            "group": 26,
+            "name": "Alcohol",
+            "rank": 2
+        }
+    },
+    {
+        "pk": 400,
+        "model": "shared.category",
+        "fields": {
+            "code": "MARM",
+            "group": 26,
+            "name": "Arms",
+            "rank": 3
+        }
+    },
+    {
+        "pk": 401,
+        "model": "shared.category",
+        "fields": {
+            "code": "MDRU",
+            "group": 26,
+            "name": "Drugs",
+            "rank": 4
+        }
+    },
+    {
+        "pk": 402,
+        "model": "shared.category",
+        "fields": {
+            "code": "MGAM",
+            "group": 26,
+            "name": "Gambling",
+            "rank": 5
+        }
+    },
+    {
+        "pk": 403,
+        "model": "shared.category",
+        "fields": {
+            "code": "MMFM",
+            "group": 26,
+            "name": "Men for Men",
+            "rank": 6
+        }
+    },
+    {
+        "pk": 404,
+        "model": "shared.category",
+        "fields": {
+            "code": "MMFW",
+            "group": 26,
+            "name": "Men for Women",
+            "rank": 7
+        }
+    },
+    {
+        "pk": 405,
+        "model": "shared.category",
+        "fields": {
+            "code": "MOTH",
+            "group": 26,
+            "name": "Other",
+            "rank": 8
+        }
+    },
+    {
+        "pk": 406,
+        "model": "shared.category",
+        "fields": {
+            "code": "MWFM",
+            "group": 26,
+            "name": "Women for Men",
+            "rank": 9
+        }
+    },
+    {
+        "pk": 407,
+        "model": "shared.category",
+        "fields": {
+            "code": "MWFW",
+            "group": 26,
+            "name": "Women for Women",
+            "rank": 10
+        }
+    },
+    {
+        "pk": 408,
+        "model": "shared.category",
+        "fields": {
+            "code": "PMSM",
+            "group": 27,
+            "name": "Men Seeking Men",
+            "rank": 1
+        }
+    },
+    {
+        "pk": 409,
+        "model": "shared.category",
+        "fields": {
+            "code": "PMSW",
+            "group": 27,
+            "name": "Men Seeking Women",
+            "rank": 2
+        }
+    },
+    {
+        "pk": 410,
+        "model": "shared.category",
+        "fields": {
+            "code": "POTH",
+            "group": 27,
+            "name": "Other",
+            "rank": 3
+        }
+    },
+    {
+        "pk": 411,
+        "model": "shared.category",
+        "fields": {
+            "code": "PWSM",
+            "group": 27,
+            "name": "Women Seeking Men",
+            "rank": 4
+        }
+    },
+    {
+        "pk": 412,
+        "model": "shared.category",
+        "fields": {
+            "code": "PWSW",
+            "group": 27,
+            "name": "Women Seeking Women",
+            "rank": 5
+        }
+    },
+    {
+        "pk": 413,
+        "model": "shared.category",
+        "fields": {
+            "code": "RCRE",
+            "group": 28,
+            "name": "Commercial Real Estate",
+            "rank": 1
+        }
+    },
+    {
+        "pk": 414,
+        "model": "shared.category",
+        "fields": {
+            "code": "RHFR",
+            "group": 28,
+            "name": "Housing For Rent",
+            "rank": 2
+        }
+    },
+    {
+        "pk": 415,
+        "model": "shared.category",
+        "fields": {
+            "code": "RHFS",
+            "group": 28,
+            "name": "Housing For Sale",
+            "rank": 3
+        }
+    },
+    {
+        "pk": 416,
+        "model": "shared.category",
+        "fields": {
+            "code": "RSUB",
+            "group": 28,
+            "name": "Housing Sublets",
+            "rank": 4
+        }
+    },
+    {
+        "pk": 417,
+        "model": "shared.category",
+        "fields": {
+            "code": "RSWP",
+            "group": 28,
+            "name": "Housing Swaps",
+            "rank": 5
+        }
+    },
+    {
+        "pk": 418,
+        "model": "shared.category",
+        "fields": {
+            "code": "RLOT",
+            "group": 28,
+            "name": "Lots & Land",
+            "rank": 6
+        }
+    },
+    {
+        "pk": 419,
+        "model": "shared.category",
+        "fields": {
+            "code": "RPNS",
+            "group": 28,
+            "name": "Parking & Storage",
+            "rank": 7
+        }
+    },
+    {
+        "pk": 420,
+        "model": "shared.category",
+        "fields": {
+            "code": "RSHR",
+            "group": 28,
+            "name": "Room Shares",
+            "rank": 8
+        }
+    },
+    {
+        "pk": 421,
+        "model": "shared.category",
+        "fields": {
+            "code": "RVAC",
+            "group": 28,
+            "name": "Vacation Properties",
+            "rank": 9
+        }
+    },
+    {
+        "pk": 422,
+        "model": "shared.category",
+        "fields": {
+            "code": "RWNT",
+            "group": 28,
+            "name": "Want Housing",
+            "rank": 10
+        }
+    },
+    {
+        "pk": 423,
+        "model": "shared.category",
+        "fields": {
+            "code": "SVCC",
+            "group": 29,
+            "name": "Creative",
+            "rank": 1
+        }
+    },
+    {
+        "pk": 424,
+        "model": "shared.category",
+        "fields": {
+            "code": "SVCE",
+            "group": 29,
+            "name": "Education",
+            "rank": 2
+        }
+    },
+    {
+        "pk": 425,
+        "model": "shared.category",
+        "fields": {
+            "code": "SVCF",
+            "group": 29,
+            "name": "Financial",
+            "rank": 3
+        }
+    },
+    {
+        "pk": 426,
+        "model": "shared.category",
+        "fields": {
+            "code": "SVCM",
+            "group": 29,
+            "name": "Health",
+            "rank": 4
+        }
+    },
+    {
+        "pk": 427,
+        "model": "shared.category",
+        "fields": {
+            "code": "SVCH",
+            "group": 29,
+            "name": "Household",
+            "rank": 5
+        }
+    },
+    {
+        "pk": 428,
+        "model": "shared.category",
+        "fields": {
+            "code": "SVCO",
+            "group": 29,
+            "name": "Other",
+            "rank": 6
+        }
+    },
+    {
+        "pk": 429,
+        "model": "shared.category",
+        "fields": {
+            "code": "SVCP",
+            "group": 29,
+            "name": "Professional",
+            "rank": 7
+        }
+    },
+    {
+        "pk": 430,
+        "model": "shared.category",
+        "fields": {
+            "code": "VAUT",
+            "group": 31,
+            "name": "Autos",
+            "rank": 1
+        }
+    },
+    {
+        "pk": 431,
+        "model": "shared.category",
+        "fields": {
+            "code": "VOTH",
+            "group": 31,
+            "name": "Other",
+            "rank": 2
+        }
+    },
+    {
+        "pk": 432,
+        "model": "shared.category",
+        "fields": {
+            "code": "VPAR",
+            "group": 31,
+            "name": "Parts",
+            "rank": 3
+        }
+    }
+]
